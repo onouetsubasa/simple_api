@@ -5,6 +5,9 @@ class User(models.Model):
     name = models.CharField(max_length=64)
     mail = models.EmailField()
 
+    def __str__(self):
+        return "{}: {}".format(self.pk, self.name)
+
 class Entry(models.Model):
     STATUS_DRAFT = "draft"
     STATUS_PUBLIC = "public"

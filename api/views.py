@@ -13,3 +13,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class EntryViewSet(viewsets.ModelViewSet):
     queryset = Entry.objects.all()
     serializer_class = EntrySerializer
+    filter_fields = (
+        'autor',
+        'status',
+    )

@@ -11,6 +11,9 @@ class UserSerializer(serializers.ModelSerializer):
         )
 
 class EntrySerializer(serializers.ModelSerializer):
+
+    autor = UserSerializer()
+
     class Meta:
         model = Entry
         fields = (
